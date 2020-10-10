@@ -16,15 +16,16 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      
-      - uses: mkrakowitzer/actions-makepdfs@master
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Publish PDF Document
+        uses: shrink/actions-document-publish@v1
+        id: publish-document
         with:
-          markdown_dir: freya
-          output_dir: tmp
-      
-      - uses: actions/upload-artifact@v1
+          sources: 'freya/**'
+      - name: Upload Document
+        uses: actions/upload-artifact@v2
+        id: upload-document
         with:
-          name: freya2
-          path: tmp
+          name: 'document.pdf'
+          path: ${{ steps.publish-document.outputs.pdf }}
