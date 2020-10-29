@@ -11,24 +11,20 @@
   </tr>
   <tr>
     <td>Strength:</td>
-    <td> 4 </td>
-    <td colspan="3" rowspan="5">Skills:</td>
+    <td> 3 </td>
+    <td colspan="3" rowspan="5">Talents:</td>
   </tr>
   <tr>
     <td>Agility:</td>
     <td> 2 </td>
   </tr>
   <tr>
-    <td> Will Power </td>
-    <td> 3 </td>
-  </tr>
-  <tr>
     <td> Intelect </td>
-    <td> 2 </td>
+    <td> 3 </td>
   </tr>
   <tr>
-    <td> Charsima </td>
-    <td> 3 </td>
+    <td> Personality </td>
+    <td> 4 </td>
   </tr>
 </tbody>
 </table>
